@@ -23,5 +23,5 @@ RUN composer install --ignore-platform-reqs
 # Give execute permission to startup script
 RUN chmod +x /app/docker-startup.sh
 
-ENTRYPOINT [ "docker-startup.sh" ]
+ENTRYPOINT [ "/app/docker-startup.sh" ]
 
