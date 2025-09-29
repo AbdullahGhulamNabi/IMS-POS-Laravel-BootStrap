@@ -2,7 +2,7 @@
 set -e
 
 # wait for db connection if you later use local db
-# sleep 10s
+sleep 10s
 
 echo "Running Laravel setup..."
 
