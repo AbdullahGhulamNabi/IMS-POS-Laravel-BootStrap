@@ -20,8 +20,8 @@ COPY . /app
 
 RUN composer install --ignore-platform-reqs
 
-# Give execute permission to startup script
-RUN chmod +x /app/docker-startup.sh
+# Convert CRLF -> LF and make it executable
+RUN sed -i 's/\r$//' /app/docker-startup.sh && chmod +x /app/docker-startup.sh
 
 ENTRYPOINT [ "/app/docker-startup.sh" ]
 
